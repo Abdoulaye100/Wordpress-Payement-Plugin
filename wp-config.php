@@ -23,16 +23,13 @@
 define( 'DB_NAME', 'wordpress' );
 
 /** Database username */
-// define( 'DB_USER', 'root' );
-define( 'DB_USER', 'rfiddev1' );
+define( 'DB_USER', 'root' );
 
 /** Database password */
-// define( 'DB_PASSWORD', '' );
-define( 'DB_PASSWORD', 'cRdl018gu432Hezk8q5' );
+define( 'DB_PASSWORD', '' );
 
 /** Database hostname */
-define( 'DB_HOST', 'azurelateliers.mysql.database.azure.com' );
-// define( 'DB_HOST', 'localhost' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -51,14 +48,14 @@ define( 'DB_COLLATE', '' );
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'd4tNMFI$/yyx*=;8Cp)*M!-7fla-TQK{8qC#[~sg3HH.I&ISWAH8O|dd3#%{G=kn' );
-define( 'SECURE_AUTH_KEY',  'DoAPKq{`fqQGRtQ|iFqX4-{gh+YCQwV|jT6h%RyiI`PHqchUhAk=Q)4ih}PJ#=t!' );
-define( 'LOGGED_IN_KEY',    'Y|8#]#0w,wT%Z)<M*~z1R@jW2z{@OW(_y?Pvkf`C9BCIe`9Vx4f0d!8B_IK@0u!f' );
-define( 'NONCE_KEY',        'FbEE#4Lz#6WebW}oB80!<mN.RS<kh,_q#cT,qGQ:ah2.*3&[N)ZvEBxc< 3zjh&C' );
-define( 'AUTH_SALT',        '$YZmM$9~2Z?8/b3NW /WHPf<bmDaace}2EdUv_/ua-TsG?tWb-=[cNCx(~tBqKT`' );
-define( 'SECURE_AUTH_SALT', 'D#Z~Mpz~Y2X6PpvS7.X >r{s70iU[4HQilA[9n,zcuGbs>{2i7UHy`5 ay`DTcA%' );
-define( 'LOGGED_IN_SALT',   'VH_> `pIX6A?4*OQJc|ixqXB-8Y:nf?~S&EY$M,Z:okXSB-;X~+HHec/dl8`yK3/' );
-define( 'NONCE_SALT',       '31EdPALg}i UlM3p0fcSrK2oQ(7HUBfI)x%ppAb*s-N pWNR1uwL!t~zf,hZp)6d' );
+define( 'AUTH_KEY',         'Or&lE}|{P01N*]4?d5D_-aEsbi&HW2IK$rm^smYH B$GOLoj*1tjaO ;i(OUPtG2' );
+define( 'SECURE_AUTH_KEY',  'Kp3h8U~XE;M,+d/eM{5xYVu6O*VwNURTn8qn;9nJO3;Gd@)GHo3IG*G;-S|6!iuC' );
+define( 'LOGGED_IN_KEY',    '}s1]$tk@Lj:Mt qKR}<3[`ZcwXec{#@#+0J~~QX{[Y-rr[,l/[MgKx8nhYs,Si,b' );
+define( 'NONCE_KEY',        'b^F1q%Zl8lC)[>L!GlUHe[I~[p~K8;&f[? ^qy ,f1q`J<b3*O.uOsm~u<!oobDB' );
+define( 'AUTH_SALT',        'HyvrG+@Et3CofQ@T;$#j0^1$t`Uekr2rhLpZX8)heP[eR,D()C=TQh?wxZ_:R}T4' );
+define( 'SECURE_AUTH_SALT', 'Z%O@`QoUp*Ja?ER|jBtG/Dn(A#Xko&(GWb0+2Q25*+`D?0&V`I<aD3KH-l6W92~W' );
+define( 'LOGGED_IN_SALT',   '/MHtuN,m:E0SArj]5:*JHj6Hmn[Mr=G{zU)=(6f&%G!jDh0=yEH[:>9hEZj9?4ZA' );
+define( 'NONCE_SALT',       '$wsp_SKONIo}E%@4yM]zTyn]Poks&ernyN,*7Gvi~/LV9??gYN-56ws_Xh!t`i[,' );
 
 /**#@-*/
 
@@ -88,7 +85,9 @@ $table_prefix = 'wp_';
  *
  * @link https://developer.wordpress.org/advanced-administration/debug/debug-wordpress/
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
+define( 'WP_DEBUG_LOG', true );
+define( 'WP_DEBUG_DISPLAY', false );
 
 /* Add any custom values between this line and the "stop editing" line. */
 

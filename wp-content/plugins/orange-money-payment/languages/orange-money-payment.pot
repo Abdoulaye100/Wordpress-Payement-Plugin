@@ -1,0 +1,311 @@
+# Orange Money Payment Gateway
+# Copyright (C) 2024
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Orange Money Payment Gateway 1.0.0\n"
+"Report-Msgid-Bugs-To: support@orangemoney.com\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: orange-money-payment.php
+msgid "Orange Money Payment Gateway nécessite WooCommerce pour fonctionner."
+msgstr ""
+
+#: orange-money-payment.php
+msgid "Paramètres"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Orange Money"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Acceptez les paiements via Orange Money dans 17 pays d'Afrique et du Moyen-Orient"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Activer/Désactiver"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Activer Orange Money"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Titre"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Le titre que vos clients verront lors du paiement"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Description"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "La description que vos clients verront lors du paiement"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Payez en toute sécurité avec Orange Money"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Mode Test"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Activer le mode test (Sandbox)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Utilisez le mode test pour tester les paiements sans transactions réelles"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Identifiants de Test (Sandbox)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Obtenez vos identifiants sur https://developer.orange.com"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Client ID (Test)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre Client ID pour le mode test"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Client Secret (Test)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre Client Secret pour le mode test"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Merchant Key (Test)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre Merchant Key pour le mode test"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Identifiants de Production"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Identifiants pour les transactions réelles"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Client ID (Production)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre Client ID pour la production"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Client Secret (Production)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre Client Secret pour la production"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Merchant Key (Production)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre Merchant Key pour la production"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Paramètres Avancés"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Code Pays"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Sélectionnez votre pays (pour la production)"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Côte d'Ivoire"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Sénégal"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Mali"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Burkina Faso"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Cameroun"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Madagascar"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "RD Congo"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Guinée"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Langue de Paiement"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Langue de la page de paiement Orange Money"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Français"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "English"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Mode Debug"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Activer les logs détaillés"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Enregistre les événements dans WooCommerce > Status > Logs"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Test de Connexion"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Testez votre connexion à l'API Orange Money"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Mode Test activé - Les paiements ne seront pas réels"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Tester la connexion à l'API Orange Money?"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Paiement Orange Money initié. Pay Token: %s"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Erreur lors de l'initialisation du paiement. Veuillez réessayer."
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Votre paiement Orange Money a été confirmé avec succès."
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Paiement Orange Money confirmé. Transaction ID: %s"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Pay Token:"
+msgstr ""
+
+#: includes/class-om-payment-gateway.php
+msgid "Transaction ID:"
+msgstr ""
+
+#: includes/class-om-webhook-handler.php
+msgid "Paiement Orange Money confirmé avec succès. Transaction ID: %s"
+msgstr ""
+
+#: includes/class-om-webhook-handler.php
+msgid "Paiement Orange Money échoué"
+msgstr ""
+
+#: includes/class-om-webhook-handler.php
+msgid "Paiement Orange Money échoué. Transaction ID: %s"
+msgstr ""
+
+#: includes/class-om-webhook-handler.php
+msgid "Paiement Orange Money en cours de traitement. Transaction ID: %s"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Orange Money - Détails du Paiement"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Cette commande n'utilise pas Orange Money"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Order ID Orange:"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Voir la page de paiement"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Vérifier le statut"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Vérifier le statut du paiement?"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Orange Money: Vérifier le statut"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Impossible de vérifier le statut: pas de pay_token"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Statut vérifié: %s (Transaction ID: %s)"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Erreur lors de la vérification du statut: %s"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Les remboursements Orange Money doivent être traités manuellement via le portail Orange Money"
+msgstr ""
+
+#: includes/class-om-hooks.php
+msgid "Orange Money TxnID"
+msgstr ""

@@ -1,0 +1,71 @@
+
+.om-payment-settings {
+    max-width: 800px;
+}
+
+.om-payment-test-connection {
+    margin-top: 10px;
+}
+
+.om-payment-test-connection button {
+    background: #ff7900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.om-payment-test-connection button:hover {
+    background: #e66d00;
+}
+
+.om-payment-logo {
+    max-width: 150px;
+    margin: 10px 0;
+}
+
+.om-transaction-details {
+    background: #f9f9f9;
+    padding: 15px;
+    border-left: 4px solid #ff7900;
+    margin: 10px 0;
+}
+
+.om-transaction-details h4 {
+    margin-top: 0;
+    color: #ff7900;
+}
+
+.om-transaction-details p {
+    margin: 5px 0;
+}
+
+.om-status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.om-status-success {
+    background: #46b450;
+    color: white;
+}
+
+.om-status-pending {
+    background: #ffb900;
+    color: white;
+}
+
+.om-status-failed {
+    background: #dc3232;
+    color: white;
+}
+
+.om-status-initiated {
+    background: #00a0d2;
+    color: white;
+}
