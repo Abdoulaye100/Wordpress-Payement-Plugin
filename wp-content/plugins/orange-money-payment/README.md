@@ -24,6 +24,24 @@ Plugin WordPress professionnel pour intégrer Orange Money comme moyen de paieme
 - Compte développeur Orange: https://developer.orange.com
 - Certificat SSL (HTTPS) pour la production
 
+## Comportement des URLs selon l'environnement
+
+Le plugin détecte automatiquement votre environnement et adapte son comportement :
+
+### En environnement local (localhost) + Mode Test
+- Les URLs (return_url, cancel_url, notif_url) sont automatiquement remplacées par httpbin.org
+- Raison : L'API Orange Money rejette les URLs localhost
+- Vous verrez les réponses JSON sur httpbin.org au lieu de revenir sur votre site
+
+### Sur site hébergé (production ou test)
+- Les URLs réelles de votre site sont utilisées
+- Le client revient sur votre site après paiement
+- Les webhooks fonctionnent normalement
+
+### En mode Production
+- Les URLs réelles sont toujours utilisées, quel que soit l'environnement
+- Assurez-vous que votre site est accessible publiquement en HTTPS
+
 ## Installation
 
 ### Étape 1: Installation du plugin
