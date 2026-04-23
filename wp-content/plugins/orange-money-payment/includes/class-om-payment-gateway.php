@@ -204,6 +204,48 @@ class WC_Orange_Money_Gateway extends WC_Payment_Gateway {
         );
     }
     
+  
+    private function is_local_environment() {
+        $host = isset($_SERVER['HTTP_HOST']) ? $_SERVER['HTTP_HOST'] : '';
+        
+        $local_hosts = array('localhost', '127.0.0.1', '::1', '.local', '.test', '.dev');
+        
+        foreach ($local_hosts as $local_host) {
+            if (strpos($host, $local_host) !== false) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    /**
+     * En mode test  httpbin.org
+     * En production -> les vraies URLs
+     */
+    private function prepare_payment_urls($order_id, $order) {
+        $return_url = $this->get_return_url($order);
+        $cancel_url = wc_get_checkout_url();
+        $notif_url = WC()->api_request_url('wc_orange_money_gateway');
+        
+      
+        if ($this->testmode && $this->is_local_environment()) {
+            $this->logger->info('Environnement local détecté en mode test - Utilisation de httpbin.org pour les URLs');
+            
+            $return_url = 'https://httpbin.org/get?return=success&order=' . $order_id;
+            $cancel_url = 'https://httpbin.org/get?return=cancel&order=' . $order_id;
+            $notif_url = 'https://httpbin.org/post?notif=webhook&order=' . $order_id;
+        } else {
+            $this->logger->info('Site hébergé ou mode production - Utilisation des URLs réelles');
+        }
+        
+        return array(
+            'return_url' => $return_url,
+            'cancel_url' => $cancel_url,
+            'notif_url' => $notif_url
+        );
+    }
+    
     /**
      * Traiter le paiement
      */
@@ -219,21 +261,11 @@ class WC_Orange_Money_Gateway extends WC_Payment_Gateway {
             $amount = $order->get_total();
             $currency = $this->testmode ? 'OUV' : $order->get_currency();
             
-            // Préparation des URLs - Remplacer localhost par des URLs valides pour les tests
-            $return_url = $this->get_return_url($order);
-            $cancel_url = wc_get_checkout_url();
-            $notif_url = WC()->api_request_url('wc_orange_money_gateway');
-            
-            // Pour les tests : remplacer les URLs localhost par des URLs de test valides
-            if (strpos($return_url, 'localhost') !== false || strpos($return_url, '127.0.0.1') !== false) {
-                $return_url = 'https://httpbin.org/get?return=success&order=' . $order_id;
-            }
-            if (strpos($cancel_url, 'localhost') !== false || strpos($cancel_url, '127.0.0.1') !== false) {
-                $cancel_url = 'https://httpbin.org/get?return=cancel&order=' . $order_id;
-            }
-            if (strpos($notif_url, 'localhost') !== false || strpos($notif_url, '127.0.0.1') !== false) {
-                $notif_url = 'https://httpbin.org/post?notif=webhook&order=' . $order_id;
-            }
+            // Préparation intelligente des URLs
+            $urls = $this->prepare_payment_urls($order_id, $order);
+            $return_url = $urls['return_url'];
+            $cancel_url = $urls['cancel_url'];
+            $notif_url = $urls['notif_url'];
             
             // Création du paiement
             $payment_data = $this->api_client->create_payment(
@@ -385,6 +417,13 @@ class WC_Orange_Money_Gateway extends WC_Payment_Gateway {
         <?php if ($this->testmode) : ?>
             <div class="notice notice-warning">
                 <p><?php esc_html_e('Mode Test activé - Les paiements ne seront pas réels', 'orange-money-payment'); ?></p>
+                <?php if ($this->is_local_environment()) : ?>
+                    <p><strong><?php esc_html_e('Environnement local détecté :', 'orange-money-payment'); ?></strong> 
+                    <?php esc_html_e('Les URLs de retour seront remplacées par httpbin.org car Orange Money n\'accepte pas les URLs localhost.', 'orange-money-payment'); ?></p>
+                <?php else : ?>
+                    <p><strong><?php esc_html_e('Site hébergé détecté :', 'orange-money-payment'); ?></strong> 
+                    <?php esc_html_e('Les URLs réelles de votre site seront utilisées pour les notifications.', 'orange-money-payment'); ?></p>
+                <?php endif; ?>
             </div>
         <?php endif; ?>
         
