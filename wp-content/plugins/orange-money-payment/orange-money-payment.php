@@ -95,8 +95,36 @@ add_action('wp_enqueue_scripts', 'om_payment_frontend_scripts');
 function om_payment_frontend_scripts() {
     if (is_checkout() || is_cart()) {
         wp_enqueue_style('om-payment-frontend', OM_PAYMENT_PLUGIN_URL . 'assets/css/frontend.css', array(), OM_PAYMENT_VERSION);
+
+        wp_enqueue_script(
+            'om-payment-js',
+            OM_PAYMENT_PLUGIN_URL . 'assets/js/frontend.js',
+            ['jquery'],
+            OM_PAYMENT_VERSION,
+            true
+        );
+
+        wp_localize_script('om-payment-js', 'om_params', [
+            'payment_url' => 'https://orange-money-url'
+        ]);
     }
+
 }
+
+add_action('wp_footer', function() {
+    if (!is_checkout()) return;
+
+    echo '
+    <div id="om-modal" style="display:none;">
+        <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:#000000aa;z-index:9999;">
+        <div style="width:80%;height:80%;margin:5% auto;background:white;">
+                <button id="om-close" style="border:none; margin:5px; padding:10px; background:#ff7900; color:white; cursor:pointer;">Fermer</button>
+                <iframe id="om-frame" src="" style="width:100%;height:100%;border:none;"></iframe>
+            </div>
+        </div>
+    </div>
+    ';
+});
 
 add_filter('plugin_action_links_' . OM_PAYMENT_PLUGIN_BASENAME, 'om_payment_plugin_action_links');
 

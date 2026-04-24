@@ -300,7 +300,9 @@ class WC_Orange_Money_Gateway extends WC_Payment_Gateway {
             // Redirection vers la page de paiement Orange Money
             return array(
                 'result' => 'success',
-                'redirect' => $payment_data['payment_url']
+                // 'redirect' => $payment_data['payment_url']
+                'redirect' => '', // on bloque la redirection.
+                'om_payment_url' => $payment_data['payment_url'] 
             );
             
         } catch (Exception $e) {
