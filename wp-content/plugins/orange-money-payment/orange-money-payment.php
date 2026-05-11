@@ -28,8 +28,8 @@ if (!in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get
 
 function om_payment_woocommerce_missing_notice() {
     echo '<div class="error"><p><strong>' . 
-         esc_html__('Orange Money Payment Gateway nécessite WooCommerce pour fonctionner.', 'orange-money-payment') . 
-         '</strong></p></div>';
+        esc_html__('Orange Money Payment Gateway nécessite WooCommerce pour fonctionner.', 'orange-money-payment') . 
+        '</strong></p></div>';
 }
 
 add_action('plugins_loaded', 'om_payment_init', 11);
